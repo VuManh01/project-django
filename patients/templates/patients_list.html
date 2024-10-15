@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Patient List</title>
+  </head>
+  <body>
+    <h1>Patient List</h1>
+    <ul>
+      {% for patient in patients %}
+      <li>{{ patient.name }} - {{ patient.phone }} - {{ patient.disease }}</li>
+      {% empty %}
+      <li>No patients found.</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
